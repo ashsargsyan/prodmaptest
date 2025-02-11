@@ -24,6 +24,8 @@ class Users {
     }
 
     assertUserVisibility() {
+        cy.reload();
+        cy.get(usersLocators.searchUserField).clear().type(email);
         cy.get(usersLocators.assertEmail).contains(email).should('be.visible');
     }
 
