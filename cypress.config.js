@@ -7,6 +7,8 @@ module.exports = defineConfig({
     },
     env: {
       baseUrl:"https://app.dev.prodmap.ai/login"
-    }
+    },
+    viewportWidth: 1440,
+    viewportHeight: 800,
   },
 });
