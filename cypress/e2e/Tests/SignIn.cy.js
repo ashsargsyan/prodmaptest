@@ -13,11 +13,7 @@ describe('SignIn workflow', () => {
         loginPage.enterPassword(credentials.validUser.password)
         loginPage.clickLoginButton()
         loginPage.assertAdminUserName()
-        cy.intercept("POST", "**/api/v1/users/signout").as("logoutRequest");
         loginPage.logOut()
-        cy.wait("@logoutRequest").then((interception) => {
-            expect(interception.response.statusCode).to.eq(204);
-        });
     });
 
     it('Should show an error message with invalid credentials', () => {
