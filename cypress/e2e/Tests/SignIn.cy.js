@@ -12,7 +12,7 @@ describe('SignIn workflow', () => {
         loginPage.enterEmail(credentials.validUser.email)
         loginPage.enterPassword(credentials.validUser.password)
         loginPage.clickLoginButton()
-        loginPage.assertLogo()
+        loginPage.assertAdminUserName()
         cy.intercept("POST", "**/api/v1/users/signout").as("logoutRequest");
         loginPage.logOut()
         cy.wait("@logoutRequest").then((interception) => {

@@ -20,8 +20,8 @@ class SignIn {
 
     }
 
-    assertLogo() {
-        cy.get("img[alt='Prodmap.ai']").should("be.visible", {timeout: 2000});
+    assertAdminUserName() {
+        cy.get(PageLocators.webLocators.adminPanel).contains("Ashot Sargsyan")
     }
 
     assertErrorMessageForInvalidUsers() {
@@ -35,7 +35,7 @@ class SignIn {
 
     logOut() {
         cy.get(PageLocators.webLocators.adminPanel).click();
-        cy.get("li.MuiMenuItem-root").contains("Log out").click();
+        cy.get(PageLocators.webLocators.logOut).contains("Log out").click();
     }
 
 }

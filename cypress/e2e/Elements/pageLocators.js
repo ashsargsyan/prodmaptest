@@ -5,7 +5,8 @@ export const PageLocators = {
         loginButton: "button[type='button']",
         errorMessageInvalidUsers: ".errorMessage_errorMessage__PPyDC",
         errorMessageInvalidCredentials: ".flexbox_flexbox__fzyz8.error ",
-        adminPanel: ".menuItem_popupMenuItemTitle__aov8U"
+        adminPanel: ".menuItem_popupMenuItemTitle__aov8U",
+        logOut: "li.MuiMenuItem-root"
 
     }
 }
