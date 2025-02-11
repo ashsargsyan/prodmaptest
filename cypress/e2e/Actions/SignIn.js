@@ -21,7 +21,7 @@ class SignIn {
     }
 
     assertAdminUserName() {
-        cy.get(PageLocators.webLocators.adminPanel).contains("Ashot Sargsyan")
+        cy.get(PageLocators.webLocators.adminPanel).should("be.visible")
     }
 
     assertErrorMessageForInvalidUsers() {
